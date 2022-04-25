@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "e-nft": "apps/e-nft",
+    "e-nft-e2e": "apps/e-nft-e2e"
+  }
 }

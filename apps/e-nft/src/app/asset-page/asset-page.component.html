@@ -1,0 +1,11 @@
+<div class="wrapper" *ngIf="asset$ | async as asset">
+  <h1>{{ asset.name }}</h1>
+  <div class="content">
+    <div class="image">
+      <img [src]="asset.imageUrl" />
+    </div>
+    <div class="description">
+      <p>{{ asset.description }}</p>
+    </div>
+  </div>
+</div>

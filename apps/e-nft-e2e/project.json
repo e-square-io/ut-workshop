@@ -1,0 +1,28 @@
+{
+  "root": "apps/e-nft-e2e",
+  "sourceRoot": "apps/e-nft-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/e-nft-e2e/cypress.json",
+        "devServerTarget": "e-nft:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "e-nft:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/e-nft-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["e-nft"]
+}

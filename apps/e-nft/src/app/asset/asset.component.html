@@ -1,0 +1,9 @@
+<a class="wrapper" routerLink="/asset/{{ asset?.assetContract?.address }}/{{ asset?.tokenId }}">
+  <div class="image-wrapper">
+    <img [src]="asset?.imagePreviewUrl" />
+  </div>
+  <div class="content-wrapper">
+    <p class="name" *ngIf="asset?.name">{{ asset?.name }}</p>
+    <p class="description" *ngIf="asset?.description">{{ asset?.description }}</p>
+  </div>
+</a>

@@ -4,7 +4,7 @@
     "defaultBase": "master"
   },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/angular"
   },
   "implicitDependencies": {
     "package.json": {
@@ -17,12 +17,7 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build",
-          "lint",
-          "test",
-          "e2e"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }
   },
@@ -41,13 +36,13 @@
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress",
       "strict": true,
-      "prefix": "ark"
+      "prefix": "app"
     },
     "@nrwl/angular:library": {
       "linter": "eslint",
       "unitTestRunner": "jest",
       "strict": true,
-      "prefix": "ark",
+      "prefix": "app",
       "buildable": true
     },
     "@nrwl/angular:component": {
@@ -57,5 +52,6 @@
     "@nrwl/angular:storybook-configuration": {
       "linter": "eslint"
     }
-  }
+  },
+  "defaultProject": "e-nft"
 }
