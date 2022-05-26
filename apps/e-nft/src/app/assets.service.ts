@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 
+import { environment } from '../environments/environment';
 import { Asset } from './data';
 import { toCamelCase } from './utils';
 
@@ -17,7 +18,7 @@ export class AssetsService {
   getAssets(): Observable<Asset[]> {
     type Response = { assets: Asset[] };
     const params = new HttpParams().set('collection', DEFAULT_COLLECTION);
-    return this.http.get<Response>(`${OPEN_SEA_API}/assets`, { params }).pipe(
+    return this.http.get<Response>(`${environment.openseaApi}/assets`, { params }).pipe(
       toCamelCase<Response>(),
       map(res => res.assets),
     );

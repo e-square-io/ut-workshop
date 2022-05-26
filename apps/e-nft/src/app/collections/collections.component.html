@@ -1,0 +1,13 @@
+<div class="collections">
+  <div class="collection" *ngFor="let collection of collections$ | async">
+    <div class="image" *ngIf="collection.imageUrl; else defaultImage">
+      <img [src]="collection.imageUrl" [alt]="collection.name" />
+    </div>
+    <ng-template #defaultImage>
+      <div class="image">
+        <img src="/assets/default-bg.jpg" />
+      </div>
+    </ng-template>
+    <p>{{ collection.name }}</p>
+  </div>
+</div>

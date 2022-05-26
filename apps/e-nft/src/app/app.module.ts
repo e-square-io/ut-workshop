@@ -7,14 +7,16 @@ import { AppComponent } from './app.component';
 import { AssetPageComponent } from './asset-page/asset-page.component';
 import { AssetComponent } from './asset/asset.component';
 import { AssetsComponent } from './assets/assets.component';
+import { CollectionsComponent } from './collections/collections.component';
 
 const routes: Routes = [
-  { path: '', component: AssetsComponent },
+  { path: '', component: CollectionsComponent },
+  { path: 'assets', component: AssetsComponent },
   { path: 'asset/:contractAddress/:tokenId', component: AssetPageComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, AssetsComponent, AssetComponent, AssetPageComponent],
+  declarations: [AppComponent, AssetsComponent, AssetComponent, AssetPageComponent, CollectionsComponent],
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' })],
   providers: [],
   bootstrap: [AppComponent],

@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  openseaApi: 'https://api.opensea.io/api/v1',
 };
 
 /*
